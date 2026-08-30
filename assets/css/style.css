@@ -4,7 +4,7 @@ html {
   line-height: 20px;
   overflow-x: hidden;
   font-family: "Work Sans", sans-serif;
-  background: linear-gradient(90deg, rgba(3, 9, 20, 0.98) 0%, rgba(3, 9, 20, 0.94) 32%, rgb(3 9 20) 54%, rgb(0 0 0) 100%);
+  background: #faf4ed;
   color: rgb(9, 19, 26);
 }
 
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  color: rgb(9, 19, 26);
+  color: #111C32;
   font-family: "Playfair", serif;
   font-family: "Instrument Serif", serif;
   letter-spacing: 1px;
@@ -74,6 +74,24 @@ ul {
   max-width: 1262px;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background: transparent;
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.35s ease,
+        padding 0.35s ease;
+}
+
+#header.is-scrolled {
+    background: #0c121f;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #FAF7F2;
@@ -389,7 +407,7 @@ header#header {
     color: #FAF7F2;
     font-size: 18px;
     max-width: 590px;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
@@ -456,7 +474,7 @@ input.form-control, select.form-control {
     margin-left: 2px;
 }
 .section-header h2 {
-    color: #FAF7F2; 
+    color: #111C32; 
     font-size: 56px;
     line-height: 1.1;
     margin-bottom: 24px;
@@ -472,11 +490,11 @@ input.form-control, select.form-control {
     letter-spacing: 0.5px;
 }
 .section-header p.lead-txt{
-    max-width: 650px;
+    max-width: 680px;
     margin: 0 auto;
     color: #aeb7c3;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
@@ -516,7 +534,8 @@ ul.contact-bio-list li i {
 footer.footer { 
     position: relative;
     z-index: 1;
-        padding-top: 60px;
+    padding-top: 60px;
+    background: #0c121f;
 }
 .footer_lines {
     position: absolute;
@@ -587,7 +606,7 @@ footer.footer {
 }
 
 .footer-social-link a {
-    background: #0d1729;
+    background: #111c32;
     color: rgb(255, 255, 255);
     font-size: 18px;
     width: 40px;
@@ -612,10 +631,11 @@ footer.footer {
     margin-top: 24px;
 }
 .footer_about p {
-    color: #e4e4e4;
-    font-size: 15px;
+    color: #FAF7F2;
+    font-size: 16px;
     line-height: 24px;
     max-width: 340px;
+    font-weight: 300;
 }
 .footer-bottom-area > .container {
     border-top: 1px solid rgb(255 255 255 / 8%);
@@ -626,6 +646,7 @@ footer.footer {
     margin: 0;
     color: #FAF7F2;
     font-size: 14px;
+        font-weight: 300;
 }
 .footer-widget-item {
     margin-bottom: 50px;
@@ -646,6 +667,7 @@ footer.footer {
 ul.footer-widget-links li a {
     color: #FAF7F2;
     font-size: 15px;
+        font-weight: 300;
 }
 ul.footer-widget-links li a:hover {
     color: #C79A52;
@@ -653,7 +675,7 @@ ul.footer-widget-links li a:hover {
 .grm-gallery-section {
     position: relative;
     padding: 60px 0;
-    background: #030914;
+    background: #FAF4ED;
     overflow: hidden;
 }
 .footer-widget-item h3 {
@@ -675,7 +697,7 @@ ul.footer-widget-links li a:hover {
 
 .grm-gallery-title {
     margin: 0 0 18px;
-    color: #FAF7F2; 
+    color: #111C32; 
     font-size: 60px;
     line-height: 1.15; 
 }
@@ -687,9 +709,9 @@ ul.footer-widget-links li a:hover {
 .grm-gallery-description {
     max-width: 650px;
     margin: 0 auto 55px;
-    color: #aeb7c3;
+    color: #111C32;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 300;
     letter-spacing: 0.5px;
 }
@@ -751,7 +773,7 @@ ul.footer-widget-links li a:hover {
 .grm-gallery-caption span {
     display: block;
     margin-bottom: 6px;
-    color: #C79A52;
+    color: #c79a52;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -761,7 +783,7 @@ ul.footer-widget-links li a:hover {
 .grm-gallery-caption h3 {
     margin: 0;
     color: #FAF7F2; 
-    font-size: 25px; 
+    font-size: 24px; 
 }
 
 
@@ -783,7 +805,7 @@ ul.footer-widget-links li a:hover {
     border: 1px solid rgba(255, 255, 255, .65);
     border-radius: 50%;
     color: #FAF7F2;
-    background: rgba(3, 9, 20, .65);
+    background: rgb(199 154 82 / 80%);
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: all .3s ease;
@@ -817,15 +839,17 @@ ul.footer-widget-links li a:hover {
 .grm-gallery-next {
     width: 46px;
     height: 46px;
-    border: 1px solid rgba(255, 255, 255, .25);
+    border: 1px solid rgb(175 180 43 / 40%);
     border-radius: 50%;
-    color: #FAF7F2;
-    background: transparent;
+    color: rgb(199 154 82);
+    background: rgba(233, 165, 27, 0.08);
     font-size: 18px;
     cursor: pointer;
     transition: all .25s ease;
 }
-
+#contact-booking .section-header h2 {
+    color: #FAF7F2;
+}
 .grm-gallery-prev:hover,
 .grm-gallery-next:hover {
     color: #071321;
@@ -852,12 +876,12 @@ ul.footer-widget-links li a:hover {
 }
 
 .grm-gallery-slider .slick-dots button {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     padding: 0;
     border: 0;
     border-radius: 50%;
-    background: #536070;
+    background: rgb(17 28 50 / 24%);
     font-size: 0;
     cursor: pointer;
 }
@@ -884,6 +908,7 @@ ul.footer-legal {
 ul.footer-legal li a {
     color: #FAF7F2;
     font-size: 14px;
+        font-weight: 300;
 }
 ul.footer-legal li a:hover{
     color: #C79A52;
@@ -893,7 +918,7 @@ ul.footer-legal li a:hover{
     position: relative;
     padding: 60px 0;
     overflow: hidden; 
-    color: #FAF7F2;
+    background: #F5ECDF;
 }
 .grm-founder-section::before {
     content: "";
@@ -957,7 +982,7 @@ ul.footer-legal li a:hover{
     align-items: center;
     border: 1px solid rgb(255 255 255 / 8%);
     border-radius: 10px;
-    background: #FAF7F2;
+    background: #faf4ed;
     box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
     height: 100px;
     padding: 16px;
@@ -972,7 +997,7 @@ ul.footer-legal li a:hover{
     display: inline-flex;
     align-items: center;
     margin-bottom: 16px;
-    color: #E9B7AE;
+    color: #C79A52;
     font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -983,7 +1008,7 @@ ul.footer-legal li a:hover{
     width: 32px;
     height: 2px; 
     margin-right: 10px; 
-    background: #E9B7AE;
+    background: #C79A52;
 } 
 .grm-founder-title span {
     display: block;
@@ -1000,11 +1025,12 @@ ul.footer-legal li a:hover{
 
 
 .grm-founder-text { 
-    margin-bottom: 15px; 
-    color: #aeb7c3; 
+    margin-bottom: 15px;
+    color: #111C32;
     font-size: 16px;
     line-height: 1.6;
-        text-align: center;
+    text-align: center;
+    font-weight: 300;
 }
 .grm-founder-quote {
     position: relative;
@@ -1012,10 +1038,12 @@ ul.footer-legal li a:hover{
     margin: 32px 0;
     padding: 22px 25px 22px 60px;
     border-left: 2px solid #C79A52;
-    background: rgba(255, 255, 255, .025);
+    background: #faf4ed;
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
     text-align: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .grm-quote-mark {
     position: absolute;
@@ -1027,12 +1055,12 @@ ul.footer-legal li a:hover{
 }
 .grm-founder-quote p {
     margin: 0;
-    color: #FAF7F2;
-    font-size: 20px;
+    color: #c79a52;
+    font-size: 18px;
     line-height: 1.3;
     font-style: italic;
     margin-bottom: 0;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
 }
 
 .grm-founder-details {
@@ -1105,9 +1133,9 @@ ul.footer-legal li a:hover{
     height: 36px;
 }
 .grm-value-icon {
-    flex: 0 0 48px; 
-    width: 48px;
-    height: 48px; 
+    flex: 0 0 56px; 
+    width: 56px;
+    height: 56px; 
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -1120,8 +1148,8 @@ ul.footer-legal li a:hover{
 
 .grm-value-item h4 {
     margin: 0 0 8px; 
-    color: #FAF7F2;  
-    font-size: 22px; 
+    color: #111C32;  
+    font-size: 20px; 
 }
 
 .grm-value-item p {
@@ -1135,6 +1163,7 @@ ul.footer-legal li a:hover{
     position: relative;
     padding: 60px 0;
     overflow: hidden; 
+    background: #F5ECDF;
 }
 .grm-lessons-section::before {
     content: ""; 
@@ -1203,7 +1232,7 @@ ul.footer-legal li a:hover{
 
 .grm-lessons-intro {
     margin: 0 0 5px auto;
-    color: #aeb7c3;
+    color: #111C32;
     font-size: 18px;
     line-height: 1.6; 
     font-weight: 300;
@@ -1220,15 +1249,11 @@ ul.footer-legal li a:hover{
 
 
 .grm-lesson-card {
-    height: 100%;
-
-    overflow: hidden;
-
+    height: 100%; 
+    overflow: hidden; 
     border: 1px solid rgb(255 255 255 / 8%);
-    border-radius: 14px;
-
-    background: rgba(255, 255, 255, .025);
-
+    border-radius: 14px; 
+    background: #FAF4ED; 
     transition:
         transform .35s ease,
         border-color .35s ease,
@@ -1237,15 +1262,11 @@ ul.footer-legal li a:hover{
 
 .grm-lesson-card:hover {
     transform: translateY(-8px); 
-    border-color: rgb(199 154 82); 
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, .35);
+    border-color: rgb(199 154 82);  
 }
 .grm-lesson-image {
-    position: relative;
-
-    height: 290px;
-
+    position: relative; 
+    height: 290px; 
     overflow: hidden;
 }
 
@@ -1314,20 +1335,20 @@ ul.footer-legal li a:hover{
     z-index: 3;
     border: 1px solid rgb(175 180 43 / 40%);
     border-radius: 50%;
-    color: #C79A52;
-    background: #081523;
+    color: #111C32;
+    background: #C79A52;
     font-size: 24px;
 }
 .grm-lesson-content h3 {
     margin: 0 0 12px;
-    color: #FAF7F2;
+    color: #111C32;
     font-size: 36px;
 }
 .grm-lesson-content p {
     margin: 0 0 25px;
-    color: #aeb7c3;
+    color:#111C32;
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1.6;
     font-weight: 300;
 }
 .grm-lesson-link {
@@ -1432,7 +1453,7 @@ ul.footer-legal li a:hover{
     position: relative; 
     padding: 60px 0; 
     overflow: hidden; 
-    background: #030914;
+    background: #FAF4ED;
 }
 .grm-inclusive-section::before {
     content: "";
@@ -1453,20 +1474,14 @@ ul.footer-legal li a:hover{
 }
 
 .grm-inclusive-section::after {
-    content: "";
-
-    position: absolute;
-
+    content: ""; 
+    position: absolute; 
     width: 400px;
-    height: 400px;
-
+    height: 400px; 
     bottom: -250px;
-    left: -200px;
-
-    border-radius: 50%;
-
-    background: rgba(31, 96, 130, .08);
-
+    left: -200px;  
+    border-radius: 50%;  
+    background: rgba(233, 165, 27, .045); 
     pointer-events: none;
 }
 .grm-inclusive-content {
@@ -1534,10 +1549,10 @@ ul.footer-legal li a:hover{
 
 .grm-inclusive-text {
     margin: 0 0 30px; 
-    color: #aeb7c3; 
-    font-size: 16px;
+    color: #111C32; 
+    font-size: 18px;
     line-height: 1.6;
-        font-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.5px;
 }
 .grm-inclusive-btn {
@@ -1578,22 +1593,15 @@ ul.footer-legal li a:hover{
     gap: 16px;
 }
 .grm-inclusive-feature {
-    position: relative;
-
+    position: relative; 
     display: flex;
-    align-items: center;
-
-    min-height: 150px;
-
-    margin-bottom: 0;
-
-    padding: 25px 25px 25px 20px;
-
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 10px;
-
-    background: rgba(3, 9, 20, .55);
-
+    align-items: center; 
+    min-height: 150px; 
+    margin-bottom: 0; 
+    padding: 25px 25px 25px 20px; 
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 16px; 
+    background: #F5ECDF; 
     transition:
         transform .3s ease,
         border-color .3s ease,
@@ -1622,8 +1630,8 @@ ul.footer-legal li a:hover{
 }
 .grm-inclusive-feature-icon {
     flex: 0 0 58px; 
-    width: 58px;
-    height: 58px; 
+    width: 56px;
+    height: 56px; 
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -1631,7 +1639,7 @@ ul.footer-legal li a:hover{
     border: 1px solid rgb(175 180 43 / 40%);
     border-radius: 50%; 
     color: #C79A52;  
-    background: rgba(233, 165, 27, .05); 
+    background: rgba(233, 165, 27, 0.08); 
     font-size: 24px;
 }
 .grm-inclusive-feature-content {
@@ -1640,17 +1648,18 @@ ul.footer-legal li a:hover{
 
 .grm-inclusive-feature-content h3 {
     margin: 0 0 8px;
-    color: #FAF7F2;
+    color: #111C32;
     font-size: 24px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .grm-inclusive-feature-content p {
     max-width: 536px;
     margin: 0;
-    color: #aeb7c3;
-    font-size: 15px;
-    line-height: 1.75;
+    color: #111C32;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 .grm-inclusive-bottom {
@@ -1722,7 +1731,7 @@ ul.footer-legal li a:hover{
     position: relative;
     padding: 60px 0;
     overflow: hidden;
-    background: #030914;
+    background: #FAF4ED;
 }
 .grm-different-section::before {
     content: "";
@@ -1786,7 +1795,7 @@ ul.footer-legal li a:hover{
 
 
 .grm-different-description {
-    color: #aeb7c3;
+    color: #111C32;
     font-size: 18px;
     line-height: 1.6;
     font-weight: 300;
@@ -1860,7 +1869,7 @@ ul.footer-legal li a:hover{
     overflow: hidden;
     border: 1px solid rgb(255 255 255 / 8%);
     border-radius: 16px;
-    background: rgba(255, 255, 255, .025);
+    background: #F5ECDF;
     transition: transform .3s ease, border-color .3s ease, background .3s ease;
 }
 .grm-different-card:hover {
@@ -1879,33 +1888,33 @@ ul.footer-legal li a:hover{
 
 .grm-different-number {
     color: #E9B7AE;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700; 
     letter-spacing: 1.5px;
 }
 .grm-different-icon {
-    width: 48px;
-    height: 48px; 
+    width: 56px;
+    height: 56px; 
     display: flex;
     align-items: center;
     justify-content: center; 
     border: 1px solid rgb(175 180 43 / 40%);
     border-radius: 50%; 
     color: #C79A52; 
-    background: rgba(233, 165, 27, .04); 
+    background: rgba(233, 165, 27, 0.08); 
     font-size: 24px;
 }
 .grm-different-card h3 {
     margin: 0 0 12px;
-    color: #FAF7F2;
+    color: #111C32;
     font-size: 28px;
 }
 .grm-different-card p {
    margin: 0;
-    color: #aeb7c3;
+    color: #111C32;
     font-size: 16px;
-    line-height: 1.75;
-        font-weight: 300;
+    line-height: 1.6;
+    font-weight: 300;
 }
 .grm-different-line {
     position: absolute; 
@@ -1928,13 +1937,13 @@ ul.footer-legal li a:hover{
     justify-content: space-between; 
     margin-top: 70px;
     padding: 35px 40px; 
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    border-top: 1px solid rgb(199 154 82 / 24%);
+    border-bottom: 1px solid rgb(199 154 82 / 24%);
 }
 .grm-statement-eyebrow {
     display: block;
     margin-bottom: 8px; 
-    color: #E9B7AE;
+    color: #C79A52;
     font-size: 13px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -1943,7 +1952,7 @@ ul.footer-legal li a:hover{
     display: flex; 
     gap: 12px; 
     margin: 0; 
-    color: #FAF7F2;  
+    color: #111C32;  
     font-size: 36px;
     line-height: 1;
 }
@@ -1954,14 +1963,14 @@ ul.footer-legal li a:hover{
 
 
 .grm-statement-right {
-    max-width: 550px;
+    max-width: 590px;
 }
 
 
 .grm-statement-right p {
     margin: 0;
-    color: #FAF7F2;
-    font-size: 18px;
+    color: #111C32;
+    font-size: 20px;
     line-height: 1.65;
     font-style: italic;
     font-family: "Instrument Serif", serif;
@@ -1972,9 +1981,13 @@ ul.footer-legal li a:hover{
     position: relative;
     padding: 60px 0;
     overflow: hidden;
+    background: url(https://html.rometheme.net/resonate/image/background.jpg); 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.grm-approach-section::before {
+.grm-approach-section::after {
     content: "";
     position: absolute;
     width: 650px;
@@ -1987,22 +2000,14 @@ ul.footer-legal li a:hover{
     pointer-events: none;
 }
 
-.grm-approach-section::after {
+.grm-approach-section::before {
     content: "";
-
+    background: rgb(17 28 50 / 84%);
+    left: 0;
     position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    bottom: -130px;
-    right: -100px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(233, 165, 27, .08);
-
-    pointer-events: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .grm-approach-eyebrow {
     display: inline-flex;
@@ -2090,10 +2095,10 @@ ul.footer-legal li a:hover{
     text-align: center;
 }
 .grm-approach-number {
-    margin-bottom: 18px; 
-    color: rgba(255, 255, 255, .25);  
-    font-size: 13px;
-    font-weight: 700; 
+    margin-bottom: 18px;
+    color: #E9B7AE;
+    font-size: 14px;
+    font-weight: 600;
     letter-spacing: 2px;
 }
 .grm-approach-icon {
@@ -2135,9 +2140,10 @@ ul.footer-legal li a:hover{
 .grm-approach-step p {
     max-width: 276px;
     margin: 0 auto;
-    color: #aeb7c3;
-    font-size: 15px;
-    line-height: 1.75;
+    color: #FAF7F2;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 .grm-approach-bottom {
@@ -2207,7 +2213,7 @@ ul.footer-legal li a:hover{
     position: relative; 
     padding: 60px 0; 
     overflow: hidden;  
-    background: #030914;
+    background: #FAF4ED;
 }
 .grm-testimonials-section::before {
     content: "";
@@ -2281,7 +2287,7 @@ ul.footer-legal li a:hover{
 
 .grm-testimonials-intro {
    margin: 0 0 5px auto;
-    color: #aeb7c3;
+    color: #111C32;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -2491,9 +2497,10 @@ ul.footer-legal li a:hover{
 .grm-testimonial-text {
     min-height: 90px;
     margin: 0 0 25px;
-    color:#aeb7c3;
-    font-size: 15px;
-    line-height: 1.7;
+    color: #111C32;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
 }
 .grm-testimonials-bottom {
     display: flex;
@@ -3476,13 +3483,14 @@ ul.footer-legal li a:hover{
     transition: border-color .3s ease, transform .3s ease;
     border: 1px solid rgb(255 255 255 / 8%);
     border-radius: 16px;
-    background: rgba(255, 255, 255, .025);
+    background: #F5ECDF;
 }
 
 
 .grm-testimonial-card:hover {
     transform: translateY(-4px); 
     border-color: rgb(199 154 82);
+    background: rgb(175 180 43 / 6%);
 }
 
 .grm-testimonial-author {
@@ -3500,13 +3508,14 @@ ul.footer-legal li a:hover{
     margin-right: 18px;
     overflow: hidden;
     border-radius: 50%;
-    background: rgb(255 255 255 / 9%);
-    color: #FAF7F2;
+    background: rgba(233, 165, 27, 0.08);
+    color: #C79A52;
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    border: 1px solid rgb(175 180 43 / 40%);
 }
 
 
@@ -3522,7 +3531,7 @@ ul.footer-legal li a:hover{
 
 .grm-testimonial-author-info h3 {
     margin: 0;
-    color: #FAF7F2;
+    color: #111C32;
     font-size: 24px;
     line-height: 1.2;
 }
@@ -3589,12 +3598,12 @@ ul.footer-legal li a:hover{
     margin: 0 5px;
 }
 .grm-testimonials-slider .slick-dots li button {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     padding: 0;
     border: 0;
-    border-radius: 12px;
-    background: #536070;
+    border-radius: 16px;
+    background: rgb(17 28 50 / 24%);
     font-size: 0;
     cursor: pointer;
 }
@@ -3603,6 +3612,9 @@ ul.footer-legal li a:hover{
 }
 .grm-testimonials-slider .slick-dots li button::before {
     display: none;
+}
+#approach .section-header h2 {
+    color: #FAF7F2;
 }
 .grm-testimonials-slider .slick-dots li.slick-active button {
     background: #C79A52;
@@ -3614,7 +3626,7 @@ ul.footer-legal li a:hover{
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 20px;
-    color: #FAF7F2;
+    color: #111C32;
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -3625,7 +3637,15 @@ ul.footer-legal li a:hover{
   background: #c79a52;
   border-radius: 50%;
 }
-
+#approach .section-header p.lead-txt {
+    max-width: 854px;
+    margin: 0 auto;
+    color: #FAF7F2;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
 
 /* Founder title */
 
@@ -3633,7 +3653,7 @@ ul.footer-legal li a:hover{
   text-align: center; 
   font-size: 18px;
   line-height: 1.6;
-color: #FAF7F2;
+    color: #111C32;
 }
 
 .grm-founder-title:first-of-type {
@@ -3667,13 +3687,11 @@ color: #FAF7F2;
   font-size: 20px;
 }
 
-.grm-booking-inner { 
-
-  padding: 75px 60px 55px;
-
+.grm-booking-inner {  
+  padding: 75px 40px 55px; 
   display: grid;
   grid-template-columns: 0.85fr 1.65fr;
-  gap: 55px;
+  gap: 24px;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -3691,9 +3709,9 @@ color: #FAF7F2;
   position: relative;
   z-index: 1;
 
-  padding-left: 45px;
+  padding-left: 24px;
 
-  border-left: 1px solid rgba(17, 28, 50, 0.18);
+  border-left: 1px solid rgb(199 154 82 / 19%);
 }
 
 
@@ -3736,15 +3754,16 @@ color: #FAF7F2;
 .grm-booking-benefit h3 {
     margin: 0 0 8px;
     color: #c79a52;
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: 22px;
+    line-height: 1.5;
 }
 
 .grm-booking-benefit p {
     margin: 0;
     color: #FAF7F2;
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
 }
 .grm-value-icon svg {
     width: 36px;
@@ -3770,12 +3789,16 @@ color: #FAF7F2;
     margin-top: 16px;
     text-align: center;
     color: #FAF7F2;
-    font-size: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grm-booking-note span {
   color: #c79a52;
   margin-right: 6px;
+  font-size: 32px;
 }
 
 .grm-footer-instruments {
@@ -3801,6 +3824,7 @@ color: #FAF7F2;
   gap: 12px;
   color: #FAF7F2;
   margin-bottom: 16px;
+      font-weight: 300;
 }
 .grm-contact-list li a{
      color: #FAF7F2;
