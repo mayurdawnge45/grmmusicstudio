@@ -24,6 +24,7 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -405,7 +406,7 @@
                       <div class="grm-lesson-image">
 
                           <img
-                              src="https://grm-harmony-design.vercel.app/assets/lesson-piano-DzKXv9j7.jpg"
+                              src="assets/images/lesson-piano.jpg"
                               alt="Piano lessons at GRM Music Studio"
                               loading="lazy"
                           >
@@ -446,7 +447,7 @@
                       <div class="grm-lesson-image">
 
                           <img
-                              src="https://grm-harmony-design.vercel.app/assets/lesson-guitar-DzyifNFf.jpg"
+                              src="assets/images/lesson-guitar.jpg"
                               alt="Guitar lessons at GRM Music Studio"
                               loading="lazy"
                           >
@@ -488,7 +489,7 @@
                       <div class="grm-lesson-image">
 
                           <img
-                              src="https://grm-harmony-design.vercel.app/assets/lesson-ukulele-BdqWJ5DW.jpg"
+                              src="assets/images/lesson-ukulele.jpg"
                               alt="Ukulele lessons at GRM Music Studio"
                               loading="lazy"
                           >
@@ -1157,7 +1158,7 @@
                   <div class="grm-founder-image-wrap"> 
                       <div class="grm-founder-image" data-aos="fade-up" data-aos-duration="1200">
                           <img
-                              src="https://08c63b0f2a.clvaw-cdnwnd.com/e2a0ff206cb678c9a252b48bc8bebdff/200000128-d93bdd93be/IMG_8618.webp?ph=08c63b0f2a"
+                              src="assets/images/founder-image.jpg"
                               alt="Giselle Montenegro, founder of GRM Music Studio"
                               loading="lazy"
                           >
@@ -1165,7 +1166,7 @@
 
                       <!-- Decorative Element -->
                       <div class="grm-founder-accent" data-aos="fade-right" data-aos-duration="1500">
-                          <img src="assets/images/GRM_logo.png">
+                          <img src="assets/images/logo.png">
                       </div> 
                   </div> 
               </div> 
@@ -1231,7 +1232,7 @@
 
           <div class="row grm-founder-values">
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-md-6">
 
                   <div class="grm-value-item" data-aos="fade-up" data-aos-duration="1500">
 
@@ -1248,7 +1249,7 @@
               </div>
 
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-md-6">
 
                   <div class="grm-value-item" data-aos="fade-up" data-aos-duration="1500">
 
@@ -1285,7 +1286,7 @@
               </div>
 
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-md-6">
 
                   <div class="grm-value-item" data-aos="fade-up" data-aos-duration="1500">
 
@@ -1342,7 +1343,7 @@
 
               </div>
 
-              <div class="col-md-3">
+              <div class="col-lg-3 col-md-6">
 
                   <div class="grm-value-item" data-aos="fade-up" data-aos-duration="1500">
 
@@ -2074,23 +2075,15 @@
 
             slidesToShow: 4,
             slidesToScroll: 1,
-
             infinite: true,
-
             autoplay: true,
             autoplaySpeed: 4000,
-
             speed: 700,
-
             arrows: false,
-
             dots: true,
-
             pauseOnHover: true,
             pauseOnFocus: true,
-
             swipeToSlide: true,
-
             responsive: [
                 {
                     breakpoint: 1200,
@@ -2107,7 +2100,8 @@
                 {
                     breakpoint: 576,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        adaptiveHeight: true
                     }
                 }
             ]

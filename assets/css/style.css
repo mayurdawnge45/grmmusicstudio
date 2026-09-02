@@ -423,7 +423,7 @@ header#header {
     margin-bottom: 20px;
 }
 .contact_home {
-    background: url(https://html.rometheme.net/resonate/image/background.jpg);
+    background: url(../images/background.jpg);
     position: relative;
     background-position: center;
     background-size: cover;
@@ -639,7 +639,7 @@ footer.footer {
 }
 .footer-bottom-area > .container {
     border-top: 1px solid rgb(255 255 255 / 8%);
-    padding: 15px 0px;
+    padding: 15px;
     position: relative;
 }
 .copyright-text p {
@@ -1964,6 +1964,7 @@ ul.footer-legal li a:hover{
 
 .grm-statement-right {
     max-width: 590px;
+    padding-left: 32px;
 }
 
 
@@ -1981,7 +1982,7 @@ ul.footer-legal li a:hover{
     position: relative;
     padding: 60px 0;
     overflow: hidden;
-    background: url(https://html.rometheme.net/resonate/image/background.jpg); 
+    background: url(../images/background.jpg); 
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

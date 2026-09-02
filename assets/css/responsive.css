@@ -1,5 +1,20 @@
 /********************** Media Query *********************************/
-@media (max-width:1199px) {}
+@media (max-width:1199px) {
+    .btn.header-btn { 
+    padding: 12px 12px; 
+    font-size: 13px;
+}
+.navbar-light .navbar-nav .nav-link { 
+    font-size: 13px;
+    margin: 0 8px; 
+}
+.navbar-light .navbar-brand img {
+    height: 54px;
+}
+.grm-approach-section, .contact_home { 
+    background-attachment: scroll;
+}
+}
 
 @media (max-width: 991px) { 
 .hero-image {
@@ -9,12 +24,16 @@
 .hero-image-card { 
     left: -12px; 
 }
+header#header > .container {
+    padding: 0;
+}
+nav.navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .h-work-card { 
     margin-top: 16px;
-}
-.section-header {
-    margin-bottom: 32px;
-}
+} 
 .pt96 {
     padding-top: 56px;
 }
@@ -73,6 +92,58 @@
 .cta-free-request-image { 
     margin-top: 40px;
 }
+.grm-different-statement { 
+    padding: 35px 0px; 
+}
+.grm-inclusive-features { 
+    grid-template-columns: repeat(2, 1fr); 
+}
+.grm-approach-steps { 
+    margin-top: 16px; 
+}
+.grm-founder-accent { 
+    right: -8px; 
+}
+.grm-founder-content {
+    padding-left: 0;
+    margin-top: 32px;
+}
+.grm-founder-quote { 
+    max-width: 100%; 
+}
+.grm-value-item { 
+    align-items: center; 
+    margin-top: 20px;
+}
+.grm-founder-values {
+    margin-top: 0;
+    padding-top: 0; 
+}
+.grm-booking-inner {  
+    grid-template-columns: 1fr; 
+}
+.grm-booking-inner .section-header{
+    text-align: center;
+}
+.hero-banner { 
+    min-height: 1px; 
+    padding-top: 150px;
+}
+.navbar-light .navbar-toggler { 
+    background: #c79a52;
+    outline: none !important;
+}
+.navbar-light .navbar-brand img {
+    height: 72px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #111C32; 
+    font-size: 15px;
+}
+.grm-booking-inner {
+    padding: 55px 32px 55px; 
+    border-radius: 0; 
+}
 }
 
 
@@ -81,6 +152,11 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center !important;
+}
+.grm-different-intro {
+    position: relative;
+    z-index: 2;
+    padding-right: 0;
 }
 .footer-logo {
     margin-bottom: 20px;
@@ -167,13 +243,151 @@ blockquote.venue-testimonial-quote {
 .how-it-works-testimonials .venue-testimonial-avatar {
     width: 100%;
 }
+.grm-lesson-card {
+    height: auto;  
+    margin: 20px 0px;
+}
+.grm-lessons-heading {
+    margin-bottom: 16px;
+}
+.grm-inclusive-content { 
+    padding-right: 0;
+}
+.grm-approach-steps { 
+    grid-template-columns: repeat(1, 1fr); 
+}
+ul.footer-legal { 
+    justify-content: flex-start; 
+}
+.grm-lessons-heading .section-header h2 {
+    margin-bottom: 24px;
+}
+.grm-approach-line {
+    display: none;
+}
+.grm-approach-step { 
+    border-bottom: 1px solid rgb(255 255 255 / 16%);
+    padding-bottom: 32px;
+}
+#testimonials .section-header h2 {
+    margin-bottom: 24px;
+}
+.grm-value-item h4 { 
+    margin-bottom: 0;
+}
+.grm-approach-steps {
+    margin-top: 40px;
+}
+.trial-modal-dialog { 
+    padding: 24px; 
+}
+.grm-eyebrow { 
+    letter-spacing: 1px;
+    font-size: 12px; 
+    padding: 6px 12px; 
+}
+.hero-banner { 
+    background: url(../images/hero-image-mobile.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right; 
+}
+.hero-banner:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #111C32;
+    opacity: 0.6;
+}
+.grm-hero-description { 
+    font-size: 16px; 
+}
+.btn.header-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+.grm-different-description { 
+    font-size: 16px; 
+}
+.grm-lessons-intro { 
+    font-size: 16px; 
+}
+.grm-lesson-content h3 { 
+    font-size: 32px;
+}
+.grm-lesson-content { 
+    padding: 30px 24px 32px;
+}
+.grm-inclusive-text { 
+    font-size: 16px; 
+}
+#approach .section-header p.lead-txt { 
+    font-size: 16px;
+    line-height: 1.6; 
+}
+.grm-testimonials-intro { 
+    font-size: 16px; 
+}
+.grm-gallery-description { 
+    font-size: 16px; 
+}
+.section-header p.lead-txt { 
+    font-size: 16px; 
+}
 }
 
 @media (max-width: 580px) {
 .hero-banner {
-    padding-top: 40px;
+    padding-top: 132px;
     padding-bottom: 60px; 
 } 
+.grm-testimonial-card { 
+    min-height: 1px; 
+}
+.grm-testimonials-header {
+    margin-bottom: 16px;
+}
+.grm-testimonial-quote {
+    position: relative;
+    left: 0;
+    bottom: 0;  
+}
+.grm-booking-details {  
+    padding-left: 0;
+    border-left: 0;
+}
+.grm-booking-benefits { 
+    grid-template-columns: repeat(1, 1fr); 
+}
+.grm-founder-image { 
+    height: 490px; 
+}
+.grm-inclusive-features {
+    grid-template-columns: repeat(1, 1fr);
+}
+.grm-different-statement {
+    padding: 35px 0px;
+    flex-direction: column;
+}
+.grm-statement-left {
+    text-align: center;
+}
+
+.grm-statement-right { 
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+.grm-different-grid { 
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+}
+.grm-different-card { 
+    min-height: 1px; 
+}
 .cta-free-request-image img {
     height: auto; 
 }
@@ -191,7 +405,10 @@ blockquote.venue-testimonial-quote {
     flex-wrap: wrap;
 }
 .section-header h2 {
-    font-size: 32px; 
+    font-size: 36px; 
+}
+.grm-gallery-title { 
+    font-size: 40px; 
 }
 .locations { 
     flex-wrap: wrap;
@@ -210,8 +427,13 @@ blockquote.venue-testimonial-quote {
     width: 100%; 
     margin-top: 4px; 
 }
-
-
+.grm-booking-benefit { 
+    margin-top: 16px;
+}
+.grm-hero-content h1 { 
+    font-size: 42px; 
+    margin-bottom: 16px;
+}
 }
 
 @media (max-width: 520px) {
